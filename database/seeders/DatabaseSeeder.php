@@ -48,5 +48,7 @@ class DatabaseSeeder extends Seeder
         ]);
         $akun_admin->save();
         $akun_admin->assignRole($role_admin);
+        
+        $this->call(DaftarMakananMinumanSeeder::class);
     }
 }

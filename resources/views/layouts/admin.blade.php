@@ -127,17 +127,17 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{route('admin.master.daftar_makanan')}}" class="nav-link {{request()->is('admin/master/daftar_makanan/*')?'active':''}}">
+                                    <a href="{{route('admin.master.daftar_makanan_minuman.index')}}" class="nav-link {{request()->is('admin/master/daftar_makanan_minuman*')?'active':''}}">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Daftar Makanan</p>
+                                        <p>Daftar Makanan Minuman</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="{{route('admin.master.resto')}}" class="nav-link {{request()->is('admin/master/resto/*')?'active':''}}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Resto</p>
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </li>
                         <li class="nav-item">
