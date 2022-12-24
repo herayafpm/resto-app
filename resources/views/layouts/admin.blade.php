@@ -132,12 +132,12 @@
                                         <p>Daftar Makanan Minuman</p>
                                     </a>
                                 </li>
-                                {{-- <li class="nav-item">
-                                    <a href="{{route('admin.master.resto')}}" class="nav-link {{request()->is('admin/master/resto/*')?'active':''}}">
+                                <li class="nav-item">
+                                    <a href="{{route('admin.master.resto.index')}}" class="nav-link {{request()->is('admin/master/resto*')?'active':''}}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Resto</p>
                                     </a>
-                                </li> --}}
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item">

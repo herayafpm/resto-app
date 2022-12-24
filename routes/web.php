@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\Master\DaftarMakananMinumanController;
+use App\Http\Controllers\Admin\Master\RestoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +26,10 @@ Route::group(['prefix' => 'admin','as' => 'admin.','namespace'=> 'App\Http\Contr
     Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');
     Route::group(['prefix' => 'master','as' => 'master.','namespace'=> 'Master','middleware' => ['auth']],function(){
         Route::resource('daftar_makanan_minuman','DaftarMakananMinumanController');
+        Route::group(['prefix' => 'resto','as' => 'resto.','middleware' => ['auth']],function(){
+            Route::get('',[RestoController::class,'index'])->name('index');
+            Route::put('update',[RestoController::class,'update'])->name('update');
+        }); 
     }); 
 }); 
 
